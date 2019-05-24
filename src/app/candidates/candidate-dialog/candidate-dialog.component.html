@@ -1,0 +1,23 @@
+<h4 mat-dialog-title>Add Candidate</h4>
+<mat-dialog-content>
+  <div class="dialog-content">
+    <mat-form-field class="candidate-form-input">
+      <input matInput type="text" placeholder="Candidate name" [(ngModel)]="candidateName"/>
+    </mat-form-field>
+    <mat-form-field class="candidate-form-input">
+      <input matInput type="text" placeholder="Project name" [(ngModel)]="projectName"/>
+    </mat-form-field>
+    <mat-form-field class="candidate-form-input">
+      <input matInput type="number" maxlength="4" minlength="4" placeholder="Year" [(ngModel)]="projectYear"/>
+    </mat-form-field>
+    <mat-form-field class="candidate-form-input">
+      <input matInput type="text" placeholder="Skills" [(ngModel)]="projectSkills"/>
+    </mat-form-field>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div class="actions-wrapper">
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-button (click)="onSubmit()" class="comfirm-highlighted">Submit</button>
+  </div>
+</mat-dialog-actions>

@@ -1,0 +1,24 @@
+.dialog-content {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comfirm-highlighted {
+  color: #3f51b5;
+}
+
+.actions-wrapper {
+  text-align: right;
+  width: 100%;
+}
+
+.candidate-form-input {
+  width: 500px;
+}
+
+@media only screen and (max-width: 700px) {
+  .candidate-form-input {
+    width: 250px;
+  }
+}

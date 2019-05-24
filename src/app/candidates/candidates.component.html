@@ -1,0 +1,45 @@
+<div class="search-skills-container">
+  <div fxLayout="row" fxLayoutAlign="space-around center">
+    <mat-form-field fxFlex="20 1 auto">
+      <input matInput type="text" placeholder="Skills" [(ngModel)]="skills" />
+    </mat-form-field>
+
+    <div class="search-actions-container" fxFlex="1 1 auto">
+      <button mat-raised-button color="primary" (click)="onSearchCandidate()">
+        <mat-icon>search</mat-icon>
+      </button>
+
+      <button mat-raised-button color="primary" (click)="onAddCandidate()">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="table-container">
+  <h3 mat-subheader>Candidates List</h3>
+
+  <!-- <mat-list> -->
+  <div>
+    <div *ngIf="dataSource.length > 0; else elseBlock">
+
+      <!-- <mat-list-item class="list-item" *ngFor="let candidate of dataSource"> -->
+      <mat-card class="margin" *ngFor="let candidate of dataSource">
+        <div mat-line>Name: {{ candidate.name }}</div>
+
+        <div *ngFor="let project of candidate.projects" class="margin">
+          <div class="indent">Project: {{ project.name }}</div>
+          <div class="indent">Year: {{ project.year }}</div>
+          <div class="indent">Skills: {{ project.skills }}</div>
+        </div>
+        <!-- </mat-list-item> -->
+      </mat-card>
+    </div>
+    <ng-template #elseBlock>
+      <p class="empty-text">
+        Product list is empty.
+      </p>
+    </ng-template>
+    <!-- </mat-list> -->
+  </div>
+</div>

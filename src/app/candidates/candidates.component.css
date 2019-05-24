@@ -1,0 +1,27 @@
+.table-container, .table {
+    width: 100%;
+}
+
+.search-skills-container button {
+    margin-left: 1em;
+}
+
+.search-actions-container {
+    text-align: center;
+}
+
+.empty-text {
+  text-align: center;
+  font-size: 0.95em;
+  color: #848484;
+  margin-top: 40px;
+}
+
+.margin {
+    margin: 2em;
+}
+
+
+.indent {
+    margin-left: 3em;
+}
